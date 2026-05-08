@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosais - Log In</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .login-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            max-width: 980px;
+            width: 100%;
+            padding: 20px;
+            gap: 40px;
+        }
+        .login-branding {
+            flex: 1 1 400px;
+            padding-right: 32px;
+        }
+        .login-branding h1 {
+            color: var(--fb-blue, #1877f2);
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+        .login-branding p {
+            font-size: 1.5rem;
+            line-height: 1.2;
+            color: #1c1e21;
+        }
+        .login-form-container {
+            flex: 0 1 396px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+            text-align: center;
+        }
+        .login-form-container input {
+            padding: 14px 16px;
+            font-size: 1.1rem;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            background: #fff;
+        }
+        .login-form-container input:focus {
+            border-color: var(--fb-blue, #1877f2);
+            box-shadow: 0 0 0 2px #e7f3ff;
+        }
+        .login-form-container button[type="submit"] {
+            background-color: var(--fb-blue, #1877f2);
+            font-size: 1.25rem;
+            padding: 12px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            width: 100%;
+        }
+        .login-form-container button[type="submit"]:hover {
+            background-color: #166fe5;
+        }
+        .login-form-container .form-message {
+            color: #f02849;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            min-height: 20px;
+        }
+        .divider {
+            border-bottom: 1px solid #dadde1;
+            margin: 20px 0;
+        }
+        .guest-mode-btn {
+            background-color: #42b72a;
+            color: white;
+            font-size: 1.1rem;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+        .guest-mode-btn:hover {
+            background-color: #36a420;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-branding">
+            <h1>mosais</h1>
+            <p>Connect with friends and the world around you on Mosais.</p>
+        </div>
+        <div class="login-form-container">
+            <form id="loginForm" class="stack">
+                <input name="username" autocomplete="username" placeholder="Username (e.g. mohamed)" required>
+                <input name="password" type="password" autocomplete="current-password" placeholder="Password (mosais)" required>
+                <button type="submit">Log In</button>
+            </form>
+            <p id="loginMessage" class="form-message"></p>
+            <p class="muted" style="font-size: 0.85rem; margin-top: 10px;">Demo password: <strong>mosais</strong>.</p>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
