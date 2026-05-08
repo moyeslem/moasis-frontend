@@ -1,4 +1,4 @@
-const API = "../back-end/api.php";
+const API = "https://moasis-backend.onrender.com/api.php";
 
 const els = {
     loginForm: document.querySelector("#loginForm"),
