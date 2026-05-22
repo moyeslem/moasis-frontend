@@ -145,7 +145,7 @@ async function loadBootstrap() {
         }
     } catch (error) {
         state.apiReady = false;
-        alert("The PHP API is not connected. Run: php -S localhost:8000 -t .");
+        alert("The backend API is not responding correctly. Check the Render backend deploy and logs.");
         console.error(error);
     }
 }

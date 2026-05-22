@@ -40,7 +40,7 @@ async function login(event) {
         localStorage.setItem("mosais:user", JSON.stringify(data.user));
         window.location.href = "index.html";
     } catch (error) {
-        els.loginMessage.textContent = "API error. Ensure the PHP server is running.";
+        els.loginMessage.textContent = "Backend API error. Check the Render backend deploy and logs.";
         console.error(error);
     }
 }
